@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Jamille-Santos/servindo-cafe-api/issues"
   },
-  "homepage": "https://github.com/Jamille-Santos/servindo-cafe-api#readme"
+  "homepage": "https://github.com/Jamille-Santos/servindo-cafe-api#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
