@@ -1,6 +1,6 @@
 // arquivo principal do servidor
 import express from 'express';
-import coffeRoutes from './routes/coffeeRoutes.js';
+import coffeeRoutes from './routes/coffeeRoutes.js';
 
 const app = express();
 // Define a porta do servidor
@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 // Todas as rotas de café começam com /api
-app.use('/api', coffeRoutes);
+app.use('/api', coffeeRoutes);
 //Rota para teste e apresentação
 
 app.get('/', (req, res) => {
