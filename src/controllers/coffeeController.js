@@ -7,14 +7,7 @@ import { generateCode } from '../utils/codeGenerator.js';
 export const getRandomCoffeeImage = async (req, res) => {
     try {
         const imageUrl = await fetchRandomCoffeeImage();
-        res.send(`
-            <html> 
-                <head><title>${JSON.stringify({ url: imageUrl })}</title></head>
-                <body>
-                    <img src="${imageUrl}" alt="Café" style="max-width: 100%; height: auto;" />
-                    <pre>${JSON.stringify({ url: imageUrl }, null, 2)}</pre>
-                </body>
-            </html>`);
+        res.json({ url: imageUrl }); // <-- Retorna só JSON!
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Erro ao obter imagem de café' });
